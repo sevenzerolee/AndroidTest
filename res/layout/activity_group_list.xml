@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="@string/str_search"
+        android:iconifiedByDefault="true"
+        android:inputType="textCapWords"
+        android:imeOptions="actionSearch"
+        android:background="@color/bg_color" > 
+	</SearchView>
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff" >
+
+        <!-- android:listSelector="@drawable/selector" > -->
+        <ListView
+            android:id="@+id/grouplistview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </ListView>
+        
+        <LinearLayout
+            android:id="@+id/layout_content_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="top|center"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/empty_label"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/empty_content" />
+            
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="#f0606060"
+            android:gravity="center"
+            android:text="@string/empty"
+            android:visibility="gone"
+            android:textColor="#ffffff"
+            android:textSize="30sp" />
+        
+        <LinearLayout
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="#d7d7d7"
+            android:gravity="center"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

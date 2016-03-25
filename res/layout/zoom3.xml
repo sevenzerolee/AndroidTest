@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+	    <Button
+	        android:id="@+id/btnBig"
+	        android:layout_width="80dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/btn_big" />
+	
+	    <Button
+	        android:id="@+id/btnSmall"
+	        android:layout_width="80dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/btn_small" />
+	    
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bmp"
+        
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/image"
+        android:src="@drawable/folder" />
+
+</LinearLayout>

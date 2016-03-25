@@ -1,0 +1,46 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+     >
+
+    <item
+        android:id="@+id/add"
+        android:title="@string/action_settings"
+        android:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/delete"
+        android:title="@string/action_settings"
+        android:showAsAction="never"/>
+    
+    <item
+        android:title="@string/app_name"
+        android:checkable="false"  
+        android:enabled="false"  
+        android:showAsAction="always"/>  
+        
+    <item  
+        android:id="@+id/action_share"  
+        android:icon="@android:drawable/ic_menu_share"  
+        android:showAsAction="ifRoom|withText"  
+        android:title="@string/app_name"/>  
+        
+    <item  
+        android:title="@string/app_name"
+        android:checkable="false"  
+        android:enabled="false"  
+        android:showAsAction="always"/>  
+        
+    <item  
+        android:id="@+id/action_search"  
+        android:icon="@android:drawable/ic_menu_search"  
+        android:showAsAction="ifRoom|withText"  
+        android:title="@string/app_name"/>  
+        
+    <item
+        android:title="@string/app_name"
+        android:checkable="false"  
+        android:enabled="false"  
+        android:showAsAction="always"/> 
+
+</menu>

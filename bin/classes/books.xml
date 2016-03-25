@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book id="7" id2="8" />
+    <book id="12" id2="13">
+        <name>thinking in java</name>
+        <price>85.5</price>
+    </book>
+    <book id="15" id2="16">
+        <name>Spring in Action</name>
+        <price>39.0</price>
+    </book>
+</books>

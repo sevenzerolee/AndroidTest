@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <EditTextPreference android:title="set" android:key="kSet"/>
+    <CheckBoxPreference android:title="set2" android:key="kSet2"/>
+    <Preference android:title="set3" android:key="kSet3"/>
+	<PreferenceCategory android:title="category" android:key="kSet4" />
+	
+	<PreferenceScreen android:title="screen">
+	    <EditTextPreference android:title="set4" android:key="kSet5"></EditTextPreference>
+	</PreferenceScreen>
+
+</PreferenceScreen>

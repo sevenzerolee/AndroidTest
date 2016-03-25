@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/grouplist_item_tag_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#9c9c9c"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/grouplist_item_tag"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="left|center"
+        android:text="@string/empty_content" />
+
+</LinearLayout>
