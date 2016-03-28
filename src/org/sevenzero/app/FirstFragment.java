@@ -1,17 +1,24 @@
 package org.sevenzero.app;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.sevenzero.AsyncTaskActivity;
 import org.sevenzero.BackActivity;
 import org.sevenzero.R;
 import org.sevenzero.SensorActivity;
 import org.sevenzero.activity.ActionBarActivity;
 import org.sevenzero.activity.MenuIconActivity;
 import org.sevenzero.dialog.SettingDialog;
+import org.sevenzero.task.AsyncUploadFileTask;
+
+import util.Constants;
 
 import android.app.Fragment;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,11 +50,19 @@ public class FirstFragment extends Fragment {
 		menuIcon = (Button) view.findViewById(R.id.menu_icon);
 		menuIcon.setOnClickListener(listener);
 		
+		// 感应器，摇一摇
 		sensor = (Button) view.findViewById(R.id.sensor);
 		sensor.setOnClickListener(listener);
 		
 		setDialog = (Button) view.findViewById(R.id.setting_dialog);
 		setDialog.setOnClickListener(listener);
+		
+		// 进度条 
+		pbButton = (Button) view.findViewById(R.id.pbButton);
+		pbButton.setOnClickListener(listener);
+		
+		pbDialogButton = (Button) view.findViewById(R.id.pbDialogButton);
+		pbDialogButton.setOnClickListener(listener);
 		
 //		return super.onCreateView(inflater, container, savedInstanceState);
 //		return inflater.inflate(R.layout.app_first_fragment, container, false);
@@ -58,6 +73,7 @@ public class FirstFragment extends Fragment {
 	private Button menuIcon;
 	private Button sensor;
 	private Button setDialog;
+	private Button pbButton, pbDialogButton;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -89,6 +105,24 @@ public class FirstFragment extends Fragment {
 		public void onClick(View v) {
 			int id = v.getId();
 			switch (id) {
+			case R.id.pbDialogButton:
+				String url = "http://192.168.1.113:8087/webstudy/fileUpload2Svlt";
+				String filepath = Constants.PREFIX + File.separator + "2images/uploadtestfile.rar";
+//				filepath = Constants.PREFIX + File.separator + "2images/testfile11m.pdf";
+				try {
+					new AsyncUploadFileTask(getActivity(), url, filepath).execute();
+				}
+				catch (FileNotFoundException e) {
+					e.printStackTrace();
+				}
+				
+				break;
+			case R.id.pbButton:
+				Intent intent = new Intent();
+				intent.setClass(getActivity(), AsyncTaskActivity.class);
+				startActivity(intent);
+				
+				break;
 			case R.id.setting_dialog:
 				menuName = addItems(new String[]{ "服务地址", "用户信息", "检查更新"});
 				

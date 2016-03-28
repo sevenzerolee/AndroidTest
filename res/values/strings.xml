@@ -14,6 +14,7 @@
     <string name="btnTest">Test</string>
     <string name="btnResult">Result</string>
     <string name="empty"></string>
+    <string name="empty_0">0%</string>
     <string name="dialog_cancel">取消</string>
     <string name="dialog_title">设置</string>
     <string name="fragment_menu_left">left</string>
@@ -76,6 +77,7 @@
     <string name="menu_icon">MenuIcon</string>
     <string name="sensor">sensor</string>
     <string name="setting_dialog">SetDialog</string>
+    <string name="pb_test">进度条</string>
     <string name="textViewSetUser">用户信息</string>
     <string name="btnMenu">Menu</string>
     <string name="btnMenuPop">MenuPop</string>

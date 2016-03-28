@@ -60,5 +60,27 @@
             android:layout_height="wrap_content"
             android:text="@string/setting_dialog" />
     </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/pbButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        	android:layout_weight="1"
+        	style="?android:attr/buttonBarButtonStyle"
+            android:text="@string/pb_test" />
+        
+        <Button
+            android:id="@+id/pbDialogButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        	android:layout_weight="1"
+        	style="?android:attr/buttonBarButtonStyle"
+            android:text="@string/pb_test" />
+    </LinearLayout>
 
 </LinearLayout>

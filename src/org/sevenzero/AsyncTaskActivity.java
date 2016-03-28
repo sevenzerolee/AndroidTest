@@ -19,7 +19,7 @@ import com.foxit.util.Util;
  */
 public class AsyncTaskActivity extends Activity {
 	
-	private static final String TAG = AsyncTaskActivity.class.getSimpleName();
+	private static final String tag = AsyncTaskActivity.class.getSimpleName();
 	
 	private ProgressBar asyncTaskProgressBar;
 	private Button btnAsyncStart, btnAsyncEnd, btnAsync;
@@ -111,6 +111,15 @@ public class AsyncTaskActivity extends Activity {
 
 }
 
+/**
+ * 
+ * @author lkimac
+ *
+ * @since 2016-3-25
+ * 
+ * 实时进度条
+ *
+ */
 class AsyncTaskTesth extends AsyncTask<String, String, String> {
 	
 	private static final String TAG = AsyncTaskTesth.class.getSimpleName();
